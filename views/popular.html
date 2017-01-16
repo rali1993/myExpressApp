@@ -1,0 +1,8 @@
+{% extends "layout.html" %}
+
+{% block content %}
+{% for url in urls %}
+<img src ="{{url}}" width="250" />
+Hello, this is the popular page
+{% endfor %}
+{% endblock %}

@@ -8,6 +8,7 @@ var nconf = require('nconf');
 var winston = require('winston');
 var nunjucks = require ('nunjucks');
 var ig = require('instagram-node').instagram();
+var popular = require('./routes/popular');
 
 var index = require('./routes/index');
 var users = require('./routes/users');
@@ -50,6 +51,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
 app.use('/users', users);
+app.use('/popular', popular);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
